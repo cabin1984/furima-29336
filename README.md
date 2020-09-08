@@ -48,11 +48,11 @@ Things you may want to cover:
 | product_image           | string     | null: false                    |
 | product_name            | string     | null: false                    |
 | product_description     | string     | null: false                    |
-| category                | string     | null: false                    |
-| product_status          | string     | null: false                    |
-| shipping_fee_burden     | string     | null: false                    |
-| shipping_region         | string     | null: false                    |
-| estimated_shipping_date | string     | null: false                    |
+| category                | integer    | null: false                    |
+| product_status          | integer    | null: false                    |
+| shipping_fee_burden     | integer    | null: false                    |
+| shipping_region         | integer    | null: false                    |
+| estimated_shipping_date | integer    | null: false                    |
 | price                   | integer    | null: false                    |
 | user_id                 | references | null: false, foreign_key: true |
 
