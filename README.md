@@ -43,7 +43,7 @@ Things you may want to cover:
 ### Association
 
 - has_many :items
-- belongs_to :purchase
+- has_many :purchase
 
 ## items テーブル
 
