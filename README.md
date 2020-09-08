@@ -49,7 +49,6 @@ Things you may want to cover:
 
 | Column                  | Type       | Options                        |  
 | ----------------------- | -----------| ------------------------------ |
-| product_image           | string     | null: false                    |
 | product_name            | string     | null: false                    |
 | product_description     | text       | null: false                    |
 | category                | integer    | null: false                    |
