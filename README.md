@@ -70,8 +70,8 @@ Things you may want to cover:
 
 ### Association
 
-- has_many :users
-- has_many :items
+- belongs_to :users
+- belongs_to :items
 - has_one :shipping_addresses
 
 ## shipping_addresses テーブル
