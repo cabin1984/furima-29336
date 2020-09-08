@@ -72,7 +72,7 @@ Things you may want to cover:
 
 - belongs_to :users
 - belongs_to :items
-- has_one :shipping_addresses
+- has_one :shipping_address
 
 ## shipping_addresses テーブル
 
