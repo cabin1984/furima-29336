@@ -34,6 +34,7 @@ Things you may want to cover:
 | password   | string | null: false |
 | name_kanji | string | null: false |
 | name_kana  | string | null: false |
+| birthday   | string | null: false |
 
 ### Association
 
