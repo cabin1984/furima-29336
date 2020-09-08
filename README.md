@@ -45,17 +45,17 @@ Things you may want to cover:
 
 ## items テーブル
 
-| Column                  | Type       | Options                        |  
-| ----------------------- | -----------| ------------------------------ |
-| product_name            | string     | null: false                    |
-| product_description     | text       | null: false                    |
-| category                | integer    | null: false                    |
-| product_status          | integer    | null: false                    |
-| shipping_fee_burden     | integer    | null: false                    |
-| shipping_region         | integer    | null: false                    |
-| estimated_shipping_date | integer    | null: false                    |
-| price                   | integer    | null: false                    |
-| user                    | references | null: false, foreign_key: true |
+| Column                     | Type       | Options                        |  
+| ---------------------------| -----------| ------------------------------ |
+| product_name               | string     | null: false                    |
+| product_description        | text       | null: false                    |
+| category                   | integer    | null: false                    |
+| product_status_id          | integer    | null: false                    |
+| shipping_fee_burden_id     | integer    | null: false                    |
+| shipping_region_id         | integer    | null: false                    |
+| estimated_shipping_date_id | integer    | null: false                    |
+| price_id                   | integer    | null: false                    |
+| user                       | references | null: false, foreign_key: true |
 
 ### Association
 
