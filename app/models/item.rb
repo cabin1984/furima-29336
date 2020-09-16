@@ -6,6 +6,7 @@ class Item < ApplicationRecord
   belongs_to_active_hash :shipping_region
   belongs_to_active_hash :estimated_shipping_date
   belongs_to :user
+  has_one_attached :image
 
   validates :product_name, :product_description, :category, :product_status, :shipping_fee_burden, :shipping_region, :estimated_shipping_date, presence: true
 
