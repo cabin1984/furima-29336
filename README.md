@@ -49,7 +49,7 @@ Things you may want to cover:
 | ---------------------------| -----------| ------------------------------ |
 | product_name               | string     | null: false                    |
 | product_description        | text       | null: false                    |
-| category                   | integer    | null: false                    |
+| category_id                | integer    | null: false                    |
 | product_status_id          | integer    | null: false                    |
 | shipping_fee_burden_id     | integer    | null: false                    |
 | shipping_region_id         | integer    | null: false                    |
