@@ -1,5 +1,5 @@
 class ItemsController < ApplicationController
-before_action :move_to_index
+  before_action :move_to_index
 
   def new
     @item = Item.new
@@ -15,9 +15,7 @@ before_action :move_to_index
   end
 
   def move_to_index
-    unless user_signed_in?
-      redirect_to action: :move_to_index
-    end
+    redirect_to action: :move_to_index unless user_signed_in?
   end
 
   private
