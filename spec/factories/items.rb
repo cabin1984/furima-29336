@@ -7,7 +7,7 @@ FactoryBot.define do
     shipping_fee_burden_id     { Faker::Number.number(1) }
     shipping_region_id         { Faker::Number.number(1) }
     estimated_shipping_date_id { Faker::Number.number(1) }
-    price_id                   { 10000 }
+    price_id                   { 10_000 }
     association :user
 
     after(:build) do |content|
