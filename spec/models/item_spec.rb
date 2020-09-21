@@ -20,13 +20,13 @@ RSpec.describe Item, type: :model do
       end
 
       it 'product_nameが空だと保存できないこと' do
-        @item.product_name = ""
+        @item.product_name = ''
         @item.valid?
         expect(@item.errors.full_messages).to include("Product name can't be blank")
       end
 
       it 'product_descriptionが空だと保存できないこと' do
-        @item.product_description = ""
+        @item.product_description = ''
         @item.valid?
         expect(@item.errors.full_messages).to include("Product description can't be blank")
       end
@@ -34,31 +34,31 @@ RSpec.describe Item, type: :model do
       it 'category_idが1だと保存できないこと' do
         @item.category_id = 1
         @item.valid?
-        expect(@item.errors.full_messages).to include("Category must be other than 1")
+        expect(@item.errors.full_messages).to include('Category must be other than 1')
       end
-      
+
       it 'product_status_idが1だと保存できないこと' do
         @item.product_status_id = 1
         @item.valid?
-        expect(@item.errors.full_messages).to include("Product status must be other than 1")
+        expect(@item.errors.full_messages).to include('Product status must be other than 1')
       end
 
       it 'shipping_fee_burden_idが1だと保存できないこと' do
         @item.shipping_fee_burden_id = 1
         @item.valid?
-        expect(@item.errors.full_messages).to include("Shipping fee burden must be other than 1")
+        expect(@item.errors.full_messages).to include('Shipping fee burden must be other than 1')
       end
 
       it 'shipping_region_idが1だと保存できないこと' do
         @item.shipping_region_id = 1
         @item.valid?
-        expect(@item.errors.full_messages).to include("Shipping region must be other than 1")
+        expect(@item.errors.full_messages).to include('Shipping region must be other than 1')
       end
 
       it 'estimated_shipping_date_idが1だと保存できないこと' do
         @item.estimated_shipping_date_id = 1
         @item.valid?
-        expect(@item.errors.full_messages).to include("Estimated shipping date must be other than 1")
+        expect(@item.errors.full_messages).to include('Estimated shipping date must be other than 1')
       end
 
       it 'price_idが空だと保存できないこと' do
@@ -91,5 +91,5 @@ RSpec.describe Item, type: :model do
         expect(@item.errors.full_messages).to include('User must exist')
       end
     end
-  end  
+  end
 end
