@@ -1,13 +1,13 @@
 FactoryBot.define do
   factory :item do
-    product_name               { '商品1' }
-    product_descripion         { '商品１の説明' }
-    category_id                { 2 }
+    product_name               { Faker::Commerce.name }
+    product_description        { Faker::Lorem.sentence }
+    category_id                { Faker::Number.number(1) }
     product_status_id          { 2 }
-    shipping_fee_burden_id     { 2 }
-    shipping_region_id         { 2 }
-    estimated_shipping_date_id { 2 }
-    price_id                   { 3000 }
+    shipping_fee_burden_id     { Faker::Number.number(1) }
+    shipping_region_id         { Faker::Number.number(1) }
+    estimated_shipping_date_id { Faker::Number.number(1) }
+    price_id                   { 10000 }
     association :user
 
     after(:build) do |content|
