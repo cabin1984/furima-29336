@@ -28,6 +28,3 @@ function price_id() {
   itemPrice.addEventListener('input', inputPrice);
 }
 window.addEventListener("load", price_id);
-
-// innerHTMLどこに何を追加するか
-//Mathオブジェクト
