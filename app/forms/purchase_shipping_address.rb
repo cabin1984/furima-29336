@@ -3,13 +3,14 @@ class PurchaseShippingAddress
   include ActiveModel::Model
   attr_accessor :user_id, :item_id, :postal_code, :prefecture_id, :city, :address, :building_name, :phone_number, :token
 
-  #with_options presence: true do
-    #validates :postal_code format: { with: /\A\d{3}[-]\d{4}\z/, message: "is invalid. Include hyphen(-)"}
-    #validates :phone_number, format: { with: /\A[0-9]+\z/, message: "is invalid. Input half-width characters."}
-  #end
+  validates :token, :postal_code, :prefecture_id, :city, :address, :phone_number, presence: true
 
-  #validates :phone_number, numericality: { less_than_or_equal_to: 11, message: "is out of setting range"}
-  #validates :prefecture_id, numericality: { other_than: 1, message: "can't be blank" }
+  with_options presence: true do
+    validates :postal_code, format: { with: /\A\d{3}[-]\d{4}\z/, message: "is invalid. Include hyphen(-)"}
+    validates :phone_number, format: { with: /\A\d{10,11}\z/, message: "is out of setting range"}
+  end
+
+  validates :prefecture_id, numericality: { other_than: 1, message: "can't be blank" }
 
   def save
     purchase = Purchase.create(token: token, user_id: user_id, item_id: item_id)
